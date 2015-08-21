@@ -195,8 +195,8 @@ PRODUCT_COPY_FILES += \
 
 # Low-RAM optimizations
 ADDITIONAL_BUILD_PROPERTIES += \
-	ro.config.low_ram=true \
-	ro.config.low_ram_hide=true \
+	ro.config.low_ram=false \
+	ro.config.low_ram_hide=false \
 	persist.sys.force_highendgfx=true \
 	dalvik.vm.jit.codecachesize=0 \
 	config.disable_atlas=true \
