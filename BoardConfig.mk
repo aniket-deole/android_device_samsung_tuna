@@ -83,7 +83,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
 
 # Enable dex-preoptimization to speed up first boot sequence
-WITH_DEXPREOPT := true
+#WITH_DEXPREOPT := true
 
 # Needed for RIL
 TARGET_NEEDS_BIONIC_MD5 := true
