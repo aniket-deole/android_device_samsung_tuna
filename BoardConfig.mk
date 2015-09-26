@@ -83,7 +83,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
 
 # Enable dex-preoptimization to speed up first boot sequence
-WITH_DEXPREOPT := true
+#WITH_DEXPREOPT := true
 
 # Needed for RIL
 TARGET_NEEDS_BIONIC_MD5 := true
@@ -109,6 +109,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_FOLDER)/bluetooth
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.tuna
 
+TARGET_TUNA_AUDIO_HDMI := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
 	$(DEVICE_FOLDER)/sepolicy
@@ -121,7 +123,9 @@ BOARD_SEPOLICY_UNION += \
 	init.te \
 	mediaserver.te \
 	pvrsrvinit.te \
-	rild.te
+	rild.te \
+	platform_app.te \
+	system_app.te
 
 # Recovery
 RECOVERY_FSTAB_VERSION := 2
